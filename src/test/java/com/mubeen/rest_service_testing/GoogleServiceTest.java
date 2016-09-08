@@ -8,9 +8,11 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import junit.framework.TestCase;
+
 //This example service is from 
 //https://www.mkyong.com/java/how-to-send-http-request-getpost-in-java/
-public class GoogleServiceTest {
+public class GoogleServiceTest extends TestCase {
 
 	private final String USER_AGENT = "Mozilla/5.0";
 
@@ -19,8 +21,8 @@ public class GoogleServiceTest {
 		System.out.println("Testing GooglePage - Send Http GET request");
 		sendGet();
 
-//		System.out.println("\nTesting 2 - Send Http POST request");
-//		sendPost();
+		System.out.println("\nTesting 2 - Send Http POST request");
+		sendPost();
 
 	}
 
@@ -52,14 +54,16 @@ public class GoogleServiceTest {
 		in.close();
 
 		// print result
-		System.out.println(response.toString());
+		//System.out.println(response.toString());
 
 	}
 
 	// HTTP POST request
 	private void sendPost() throws Exception {
 
-		String url = "https://selfsolve.apple.com/wcResults.do";
+		//String url = "https://selfsolve.apple.com/wcResults.do";
+		String url = "https://selfsolve.apple.com/agreementWarrantyDynamic.do";
+		
 		URL obj = new URL(url);
 		HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 
@@ -92,7 +96,7 @@ public class GoogleServiceTest {
 		in.close();
 
 		// print result
-		System.out.println(response.toString());
+		//System.out.println(response.toString());
 
 	}
 
