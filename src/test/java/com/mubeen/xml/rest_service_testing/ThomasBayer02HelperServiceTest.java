@@ -3,7 +3,7 @@ package com.mubeen.xml.rest_service_testing;
 import junit.framework.TestCase;
 
 //This is same as ThomasBayer01Test but using "ThomasBayerGetService" helper class
-public class ThomasBayer02Test extends TestCase {
+public class ThomasBayer02HelperServiceTest extends TestCase {
 	
 	public void testService() throws Exception{
 		
